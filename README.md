@@ -28,7 +28,7 @@
 | Column             | Type    | Option       |
 | ------------------ | ------  | ------------ |
 | name               | string  | null: false  |
-| description        | string  | null: false  |
+| description        | text    | null: false  |
 | category_id        | integer | null: false  |
 | color_id           | integer | null: false  |
 | size_id            | integer | null: false  |
