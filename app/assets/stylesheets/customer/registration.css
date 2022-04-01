@@ -2,7 +2,7 @@
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #f5f5f5;
+  background-image: url('mybrand_top.jpeg');
   display: flex;
   justify-content: center;
 }

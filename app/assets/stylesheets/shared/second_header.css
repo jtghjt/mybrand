@@ -6,9 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  font-size: 50px;
 }
 
 .second-logo {
-  width: 185px;
+  width: 270px;
   height: 49px;
+  color: red;
 }
