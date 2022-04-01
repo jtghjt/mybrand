@@ -23,4 +23,7 @@
   width: 185px;
   height: 49px;
   margin: 0 auto;
+  color: red;
+  font-weight: bold;
+  font-size: 50px;
 }
