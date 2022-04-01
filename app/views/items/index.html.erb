@@ -1,0 +1,86 @@
+<%# header %>
+<%= render "shared/header" %>
+
+<div class='main'>
+  <%# ブランドロゴ%>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      MYBRAND
+    </h2>
+  </div>
+
+
+  <%# 新着商品 %>
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      NEW ITEMS
+    </h2> 
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= link_to "#" do%>
+        <%= image_tag "sample3.jpeg", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+          リング
+        </h3>
+        <% end %>
+      </li>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <%= image_tag "sample2.jpeg", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+          ジーンズ
+        </h3>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+
+
+  <%# 開発商品リンク %>
+  <div class='ad-contents'>
+    <%= link_to "#" do %>
+    <h2 class='ad-title'>
+      一緒に着てみたい服を作ってみませんか？
+    </h2>
+    <p class='ad-explain'>
+      こんな服あったらいいのにな......
+    </p>
+    <p class='ad-explain'>
+      こういうデザイン・カラーあったらもっといいはず.....
+    </p>
+    <p class='ad-explain'>
+      そういったお声をぜひ聞かせてください！
+    </p>
+    <% end %>
+  </div>
+
+
+  <%# 商品一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>ITEMS</h2>
+    
+    <ul class='item-lists'>
+    <% @items.each do |item| %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= image_tag item.image, class: "item-img" %>
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= item.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= item.price %>円</span>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<%# hooter %>
+<%= render "shared/footer" %>
