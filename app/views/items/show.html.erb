@@ -1,0 +1,55 @@
+<%= render "shared/header" %>
+
+<%# 商品の概要 %>
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @item.name %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @item.image ,class:"item-box-img" %>
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= "¥ #{@item.price}" %>
+      </span>
+    </div>
+
+    <div class="item-explain-box">
+      <span><%= @item.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">商品名</th>
+          <td class="detail-value"><%= @item.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @item.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カラー</th>
+          <td class="detail-value"><%= @item.color.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">サイズ</th>
+          <td class="detail-value"><%= @item.size.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">プライス</th>
+          <td class="detail-value"><%= "¥ #{@item.price}" %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="option">
+      <div class="favorite-btn">
+        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <span>お気に入り 0</span>
+      </div>
+    </div>
+    <%= link_to "カートに入れる", "#" ,class:"item-red-btn"%>
+  </div>
+  <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
+</div>
+
+<%= render "shared/footer" %>
