@@ -28,5 +28,5 @@ item_3 = Item.new(
   size_id: 5,
   price: 8900
   )
-item_3.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample3.jpg")), filename: 'sample3.jpg')
+item_3.image.attach(io: File.open(Rails.root.join("./app/assets/images/item-sample.png")), filename: 'item-sample.png')
 item_3.save
