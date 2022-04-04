@@ -6,7 +6,7 @@ item_1 = Item.new(
   size_id: 3,
   price: 6990
   )
-item_1.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample1.jpeg")), filename: 'sample1.jpeg')
+item_1.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample1.jpg")), filename: 'sample1.jpg')
 item_1.save
 
 item_2 = Item.new(
@@ -17,7 +17,7 @@ item_2 = Item.new(
   size_id: 3,
   price: 12900
   )
-item_2.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample2.jpeg")), filename: 'sample2.jpeg')
+item_2.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample2.jpg")), filename: 'sample2.jpg')
 item_2.save
 
 item_3 = Item.new(
@@ -28,8 +28,5 @@ item_3 = Item.new(
   size_id: 5,
   price: 8900
   )
-item_3.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample3.jpeg")), filename: 'sample3.jpeg')
+item_3.image.attach(io: File.open(Rails.root.join("./app/assets/images/sample3.jpg")), filename: 'sample3.jpg')
 item_3.save
-
-
-
