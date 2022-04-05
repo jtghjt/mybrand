@@ -2,11 +2,7 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   
   # テーブルアソシエーション
-  has_many :item_orders
-  has_many :item, through: :item_orders
-
-  has_many :favorites
-  has_many :carts
+  has_one :order
 
   # アクティブハッシュアソシエーション
   belongs_to :category

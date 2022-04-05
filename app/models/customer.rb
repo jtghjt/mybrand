@@ -5,8 +5,6 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :orders
-  has_many :favorites
-  has_many :carts
   has_many :comments
 
   with_options presence: true do
