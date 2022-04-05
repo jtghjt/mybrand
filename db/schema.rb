@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2022_04_05_033539) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "quantity", null: false
+    t.integer "quantity_id", null: false
     t.integer "total_price", null: false
     t.bigint "customer_id", null: false
     t.bigint "item_id", null: false
