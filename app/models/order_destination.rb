@@ -4,7 +4,7 @@ class OrderDestination
   attr_accessor :quantity, :total_price, :customer_id, :item_id, :postcode, :prefecture_id, :city, :block, :building, :phone_number, :token
 
   with_options presence: true do
-    validates :quantity
+    validates :quantity_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :total_price
     validates :customer_id
     validates :item_id
