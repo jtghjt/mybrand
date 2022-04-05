@@ -10,6 +10,7 @@ class OrderDestination
     validates :customer_id
     validates :item_id
     validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is Invalid. Include hyphen(-)'}
+    validates :prefecture_id, format: { other_than: 1, message: "can't be blank" }
     validates :city
     validates :block
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'is invalid'}
