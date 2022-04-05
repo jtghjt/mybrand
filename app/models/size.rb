@@ -6,4 +6,7 @@ class Size < ActiveHash::Base
     { id: 4, name: 'L' },
     { id: 5, name: 'F' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
 end
