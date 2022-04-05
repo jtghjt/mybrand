@@ -15,4 +15,7 @@ class Color < ActiveHash::Base
     { id: 13, name: 'シルバー' },
     { id: 14, name: 'ゴールド' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
 end
