@@ -10,7 +10,7 @@ a {
 .title-contents {
   height: 50vh;
   width: 100vw;
-  background-image: image-url('mybrand_top.jpeg');
+  background-image: image-url('title_back.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -25,7 +25,7 @@ a {
 
 .service-title {
   font-size: 18vh;
-  color: red;
+  color: black;
   margin: 0 auto;
 }
 
@@ -85,7 +85,7 @@ a {
 /* 商品開発リンク */
 .ad-contents {
   width: 100vw;
-  background-image: image-url('furima-header02.png');
+  background-image: image-url('title_back.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -101,7 +101,7 @@ a {
 .ad-title {
   font-size: 5vh;
   margin-bottom: 2vh;
-  color: white;
+  color: black;
 }
 
 .ad-explain {
