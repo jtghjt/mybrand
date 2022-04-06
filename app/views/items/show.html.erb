@@ -10,7 +10,7 @@
       <%= image_tag @item.image ,class:"item-box-img" %>
     <div class="item-price-box">
       <span class="item-price">
-        <%= "¥ #{@item.price}" %>
+        ¥<%= @item.price %>
       </span>
     </div>
 
@@ -37,7 +37,7 @@
         </tr>
         <tr>
           <th class="detail-item">プライス</th>
-          <td class="detail-value"><%= "¥ #{@item.price}" %></td>
+          <td class="detail-value">¥<%= @item.price %></td>
         </tr>
       </tbody>
     </table>
