@@ -12,6 +12,6 @@ class Quantity <ActiveHash::Base
     { id: 10, name: 9}
   ]
 
-    include ActiveHash::Associations
-    has_many :orders
+  include ActiveHash::Associations
+  has_many :orders
 end
