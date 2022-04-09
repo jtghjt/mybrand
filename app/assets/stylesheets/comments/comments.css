@@ -1,0 +1,44 @@
+.comment {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.comment .customer-info {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.comment .customer-name {
+  width: 100%;
+  height: auto;
+}
+
+.comment .chatting {
+  width: 100%;
+}
+
+.customer-comment {
+  display: inline-block;
+  position: relative;
+  margin: 5px 0 0 15px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+
+.customer-comment:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+
+.customer-comment p {
+  margin: 0;
+  padding: 0;
+}

@@ -29,6 +29,23 @@
       <% end %>
     <% end %>
   </div>
+
+  <%# コメント表示欄　%>
+  <div id="comments">
+    <h4>＜コメント一覧＞</h4>
+    <% @product.comments.each do |comment| %>
+      <div class="comment">
+        <div class= customer-info>
+          <p class="customer-name"><%= comment.customer.nickname %> : </p>
+          <div class="chatting">
+            <div class="customer-comment">
+              <p><%= comment.comment %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <%= render "shared/footer" %>
