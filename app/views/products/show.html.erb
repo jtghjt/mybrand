@@ -18,7 +18,7 @@
   <%# コメント欄 %>
   <div class="comment-box">
     <% if customer_signed_in? %>
-      <%= form_with model: [@product, @comment], id: "comment-from" do |f| %>
+      <%= form_with model: [@product, @comment], id: "comment-form" do |f| %>
         <%= f.text_area :comment, class:"comment-text" %>
         <p class="comment-warn">
           相手のことを考え丁寧なコメントを心がけましょう。
