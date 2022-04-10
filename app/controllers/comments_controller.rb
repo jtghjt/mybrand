@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to product_path[:product_id]
+      ActionCable.server.broadcast "comment_cahnnel", {comment: @comment, customer: @comment.customer }
     end
   end
 
