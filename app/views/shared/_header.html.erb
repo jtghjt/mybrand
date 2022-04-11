@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
   <div class='search-bar-contents'>
-    <%= link_to "MYBRAND", root_path, class:"furima-icon" %>
+    <%= link_to "MYBRAND", root_path, class:"brand-logo" %>
     <%= search_form_for Item.ransack(params[:q]), url: search_items_path, html: {class: "search-form"} do |f|%>
       <%= f.text_field :name, placeholder: 'キーワードから探す', class: 'input-box' %>
       <br>
@@ -13,11 +13,11 @@
   </div>
   <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to '商品検索', search_items_path, class: "category-list" %></li>
+      <li><%= link_to '商品検索', search_items_path, class: "item-search" %></li>
     </ul>
     <ul class='lists-right'>
       <% if customer_signed_in? %>
-        <li><%= link_to current_customer.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to current_customer.nickname, "#", class: "customer-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_customer_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ログイン', new_customer_session_path, class: "login" %></li>

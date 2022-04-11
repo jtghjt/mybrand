@@ -16,10 +16,10 @@
   align-items: center;
 }
 
-.furima-icon {
+.brand-logo {
   width: 10vw;
   margin-right: 10vw;
-  color: red;
+  color: white;
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@
 
 }
 
-.category-list {
+.item-search {
   text-decoration: none;
   margin-right: 3vw;
   color: white;
@@ -78,7 +78,7 @@
 }
 
 
-.user-nickname {
+.customer-nickname {
   text-decoration: none;
   margin-right: 3vw;
   color: white;
