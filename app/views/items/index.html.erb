@@ -2,24 +2,25 @@
 <%= render "shared/header" %>
 
 <div class='main'>
+  
   <%# ブランドロゴ%>
   <div class='title-contents'>
-    <h2 class='service-title'>
+    <h2 class='brand-title'>
       MYBRAND
     </h2>
   </div>
 
 
   <%# 新着商品 %>
-  <div class='select-reason-contents'>
+  <div class='new-arrival-contents'>
     <h2 class='title'>
       NEW ITEMS
     </h2> 
-    <ul class='reason-lists'>
+    <ul class='new-arrival-lists'>
       <li class='list'>
         <%= link_to "#" do%>
         <%= image_tag "sample3.jpg", class:"list-pict" %>
-        <h3 class='reason-list-text'>
+        <h3 class='list-text'>
           リング
         </h3>
         <% end %>
@@ -27,7 +28,7 @@
       <li class='list'>
         <%= link_to "#" do %>
         <%= image_tag "sample2.jpg", class:"list-pict" %>
-        <h3 class='reason-list-text'>
+        <h3 class='list-text'>
           ジーンズ
         </h3>
         <% end %>
@@ -37,18 +38,18 @@
 
 
   <%# 開発商品リンク %>
-  <div class='ad-contents'>
+  <div class='product-contents'>
     <%= link_to products_path do %>
-    <h2 class='ad-title'>
+    <h2 class='product-title'>
       一緒に着てみたい服を作ってみませんか？
     </h2>
-    <p class='ad-explain'>
+    <p class='product-text'>
       こんな服あったらいいのにな......
     </p>
-    <p class='ad-explain'>
+    <p class='product-text'>
       こういうデザイン・カラーあったらもっといいはず.....
     </p>
-    <p class='ad-explain'>
+    <p class='product-text'>
       そういったお声をぜひ聞かせてください！
     </p>
     <% end %>

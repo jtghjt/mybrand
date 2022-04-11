@@ -23,7 +23,7 @@ a {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.service-title {
+.brand-title {
   font-size: 18vh;
   color: black;
   margin: 0 auto;
@@ -31,11 +31,11 @@ a {
 
 
 /* 新着商品 */
-.select-reason-contents {
+.new-arrival-contents {
   padding: 5vh 15vw;
 }
 
-.select-reason-contents>.title {
+.new-arrival-contents>.title {
   text-align: center;
   font-size: 3.5vh;
   font-weight: bold;
@@ -44,7 +44,7 @@ a {
   color: white;
 }
 
-.select-reason-contents>.title::after {
+.new-arrival-contents>.title::after {
   content: '';
   width: 70px;
   height: 4px;
@@ -55,14 +55,14 @@ a {
   transform: translateX(-50%);
 }
 
-.reason-lists {
+.new-arrival-lists {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   color: white;
 }
 
-.reason-lists>.list {
+.new-arrival-lists>.list {
   width: 33vh;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ a {
   width: 100%;
 }
 
-.reason-list-text {
+.list-text {
   font-size: 18px;
   line-height: 50px;
   color: white;
@@ -83,7 +83,7 @@ a {
 
 
 /* 商品開発リンク */
-.ad-contents {
+.product-contents {
   width: 100vw;
   background-image: image-url('title_back.jpg');
   background-size: cover;
@@ -98,13 +98,13 @@ a {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.ad-title {
+.product-title {
   font-size: 5vh;
   margin-bottom: 2vh;
   color: black;
 }
 
-.ad-explain {
+.product-text {
   font-size: 2.5vh;
   line-height: 30px;
   color: white;
@@ -164,22 +164,6 @@ a {
   width: 33vh;
   height: 33vh;
 }
-
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
-}
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
-}
-
 
 .item-info {
   background-color: #FFF;
