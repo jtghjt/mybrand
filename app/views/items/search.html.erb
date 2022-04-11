@@ -1,0 +1,56 @@
+<%# header %>
+<%= render "shared/header" %>
+
+<div class="main">
+
+  <%# 検索表示 %>
+  <h3>ITEM SEARCH</h3>
+
+  <div class='item-contents' id="details-search-result-wrapper">
+    <%= search_form_for @q, url: search_items_path, html: {id: "detailed-search-form"} do |f| %>
+      <div class="search-field">
+        <%= f.label :name, '商品名' %>
+        <br>
+        <%= f.text_field :name, placeholder: '商品名', value: params[:q]&.dig(:name) %>
+      </div>
+      <div class="search-field">
+        <%= f.label :category_id_eq, 'カテゴリー' %>
+        <br>
+        <%= f.collection_check_boxes(:category_id_in, Category.all, :id, :name, {}) %>
+      </div>
+      <div class="search-field">
+        <%= f.label :price_qteq, '価格' %>
+        <br>
+        <%= f.number_field :price_gteq %> 円以上
+        <br>
+        <%= f.number_field :price_lteq %> 円以下
+      </div>
+      <%= f.submit "検索" %>
+    <% end %>
+
+    <h2 class='title'>ITEMS</h2>
+    
+    <ul class='item-lists' id="deatailed-search-result">
+      <% @items.each do |item| %>
+        <li class='list'>
+          <%= link_to item_path(item.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag item.image, class: "item-img" %>
+            </div>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <%= item.name %>
+              </h3>
+              <div class='item-price'>
+                <span><%= item.price %>円</span>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%# hooter %>
+<%= render "shared/footer" %>
