@@ -2,7 +2,7 @@
   width: 100%;
   min-width: 800px;
   height: 130px;
-  background-color: #f5f5f5;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,5 +13,5 @@
 .second-logo {
   width: 270px;
   height: 49px;
-  color: red;
+  color: white;
 }

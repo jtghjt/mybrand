@@ -4,34 +4,33 @@
 <div class='main'>
   <%# ブランドロゴ%>
   <div class='title-contents'>
-    <h2 class='service-title'>
+    <h2 class='brand-title'>
       MYBRAND
     </h2>
   </div>
 
   <%# 開発商品一覧 %>
-  <div class='item-contents'>
+  <div class='product-contents'>
     <h2 class='title'>PRODUCT ITEMS</h2>
     
-    <ul class='item-lists'>
-    <% @products.each do |product| %>
-      <li class='list'>
-        <%= link_to product_path(product.id) do %>
-        <div class='item-img-content'>
-          <%= image_tag product.image, class: "item-img" %>
-
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= product.name %>
-          </h3>
-          <div class='item-price'>
-            <span><%= product.description %></span>
+    <ul class='product-lists'>
+      <% @products.each do |product| %>
+        <li class='list'>
+          <%= link_to product_path(product.id) do %>
+          <div class='product-img-content'>
+            <%= image_tag product.image, class: "product-img" %>
           </div>
-        </div>
-        <% end %>
-      </li>
-    <% end %>
+          <div class='product-info'>
+            <h3 class='product-name'>
+              <%= product.name %>
+            </h3>
+            <div class='product-description'>
+              <span><%= product.description %></span>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>

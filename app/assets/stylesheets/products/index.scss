@@ -23,25 +23,25 @@ a {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.service-title {
+.brand-title {
   font-size: 18vh;
   color: black;
   margin: 0 auto;
 }
 
 
-/* 商品一覧 */
+/* 開発商品一覧 */
 
-.item-contents {
-  background-color: black;
+.product-contents {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
   color: white;
+  background-color: black;
 }
 
-.item-contents>.title {
+.product-contents>.title {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
@@ -49,7 +49,7 @@ a {
   margin-bottom: 5vh;
 }
 
-.item-contents>.title::after {
+.product-contents>.title::after {
   content: '';
   width: 70px;
   height: 4px;
@@ -60,44 +60,43 @@ a {
   transform: translateX(-50%);
 }
 
-.item-lists {
+.product-lists {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-color: black;
 }
 
-.item-lists>.list {
+.product-lists>.list {
   width: 60vh;
   padding: 1vw;
   background-color: #FFF;
-  margin-top: 10px;
+  margin: 20px 0;
 }
 
 
-.item-img-content {
+.product-img-content {
   position: relative;
 }
 
-.item-img {
+.product-img {
   width: 56vh;
   height: 50vh;
 }
 
-.item-info {
+.product-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
 }
 
-.item-name {
+.product-name {
   font-size: 2.5vh;
 }
 
-.item-price {
+.product-description {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
 }
-
-
