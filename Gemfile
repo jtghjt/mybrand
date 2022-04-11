@@ -67,3 +67,5 @@ gem 'devise'
 gem 'payjp'
 
 gem 'pry-rails'
+
+gem 'ransack'
