@@ -43,9 +43,8 @@
 
 | Column             | Type       | Option                          | 
 | ------------------ | ---------- | ------------------------------- |
-| shipping_cost      | integer    | null: false                     |
-| total_price        | integer    | null: false                     |
 | customer           | references | null: false, foreign_key: true  |
+| item               | references | null: false, foreign_key: true  |
 
 ## association
 
