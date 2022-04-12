@@ -19,7 +19,6 @@
 
 - has_many :orders
 - has_many :favorites
-- has_many :carts
 - has_many :comments
 
 
@@ -36,11 +35,8 @@
 
 ## association
 
-- has_many :item_orders
-- has_many :orders, through: :item_orders
-
 - has_many :favorites
-- has_many :carts
+- has_one :orders
 
 
 ## orders テーブル
@@ -53,26 +49,9 @@
 
 ## association
 
-- has_many :item_orders
-- has_many :items, through: :item_orders
-
+- belongs_to :item
 - belongs_to :customer
 - has_one :destination
-
-
-## item_orders テーブル
-
-| Column             | Type       | Option                          | 
-| ------------------ | ---------- | ------------------------------- |
-| quantity           | integer    | null: false                     |
-| sub_price          | integer    | null: false                     |
-| item               | references | null: false, foreign_key: true  |
-| order              | references | null: false, foreign_key: true  |
-
-## association
-
-- belongs_to :item
-- belongs_to :order
 
 
 ## destinations テーブル
@@ -90,20 +69,6 @@
 ## association
 
 - belongs_to :order
-
-
-## carts テーブル
-
-| Column             | Type       | Option                          | 
-| ------------------ | ---------- | ------------------------------- |
-| quantity           | integer    | null: false                     |
-| item               | references | null: false, foreign_key: true  |
-| customer           | references | null: false, foreign_key: true  |
-
-## association
-
-- belongs_to :item
-- belongs_to :customer
 
 
 ## favorites テーブル
