@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_09_044907) do
+ActiveRecord::Schema.define(version: 2022_04_13_164426) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -72,6 +72,16 @@ ActiveRecord::Schema.define(version: 2022_04_09_044907) do
     t.index ["order_id"], name: "index_destinations_on_order_id"
   end
 
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "customer_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id", "item_id"], name: "index_favorites_on_customer_id_and_item_id", unique: true
+    t.index ["customer_id"], name: "index_favorites_on_customer_id"
+    t.index ["item_id"], name: "index_favorites_on_item_id"
+  end
+
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
@@ -103,5 +113,7 @@ ActiveRecord::Schema.define(version: 2022_04_09_044907) do
   add_foreign_key "comments", "customers"
   add_foreign_key "comments", "products"
   add_foreign_key "destinations", "orders"
+  add_foreign_key "favorites", "customers"
+  add_foreign_key "favorites", "items"
   add_foreign_key "orders", "customers"
 end
