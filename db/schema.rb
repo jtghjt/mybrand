@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(version: 2022_04_13_164426) do
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["customer_id", "item_id"], name: "index_favorites_on_customer_id_and_item_id", unique: true
     t.index ["customer_id"], name: "index_favorites_on_customer_id"
     t.index ["item_id"], name: "index_favorites_on_item_id"
   end
