@@ -6,6 +6,7 @@ class Customer < ApplicationRecord
 
   has_many :orders
   has_many :comments
+  has_many :favorites, dependent: :destroy
 
   with_options presence: true do
     validates :nickname
@@ -16,5 +17,9 @@ class Customer < ApplicationRecord
     validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :birthday
+  end
+
+  def favorite_find(item_id)
+    favorites.where(item_id: item_id).exists?
   end
 end
