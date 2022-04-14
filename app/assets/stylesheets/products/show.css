@@ -28,10 +28,11 @@
 
 .product-box-img {
   height: 50vh;
-  width: 60vw;
+  width: 70vw;
   min-height: 500px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
+  background-size: cover;
 }
 
 .product-text {
@@ -81,11 +82,10 @@
   margin-bottom: 2vh;
 }
 
-.comment-flag {
-  display: flex;
-  justify-content: center;
+.comment {
+  width: 60vw;
 }
 
-.comment-flag-icon {
-  margin: 10px 5px 0 0;
+.customer-comment {
+  width: 60vw;
 }

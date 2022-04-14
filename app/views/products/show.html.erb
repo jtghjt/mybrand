@@ -30,12 +30,12 @@
     <% end %>
   </div>
 
-  <%# コメント表示欄　%>
-  <div id="comments">
+  <%# コメント表示欄 %>
+  <div id="comments" class="comments">
     <h4>＜コメント一覧＞</h4>
     <% @product.comments.each do |comment| %>
       <div class="comment">
-        <div class= customer-info>
+        <div class="customer-info">
           <p class="customer-name"><%= comment.customer.nickname %> : </p>
           <div class="chatting">
             <div class="customer-comment">
