@@ -72,3 +72,5 @@ gem 'payjp'
 gem 'pry-rails'
 
 gem 'ransack'
+
+gem 'gretel'
