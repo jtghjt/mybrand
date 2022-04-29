@@ -2,6 +2,18 @@ crumb :root do
   link "Home", root_path
 end
 
+crumb :search do
+  link "商品検索", search_items_path
+  parent :root
+end
+
+crumb :products do
+  link "開発商品一覧", products_path
+  parent :root
+end
+
+
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
