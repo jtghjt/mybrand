@@ -2,7 +2,12 @@ crumb :root do
   link "Home", root_path
 end
 
-crumb :search do
+crumb :item do
+  link "商品詳細", item_path(params[:id])
+  parent :root
+end
+
+crumb :search do 
   link "商品検索", search_items_path
   parent :root
 end
@@ -11,6 +16,12 @@ crumb :products do
   link "開発商品一覧", products_path
   parent :root
 end
+
+crumb :product do
+  link "開発商品詳細", product_path(params[:id])
+  parent :products
+end
+
 
 
 
