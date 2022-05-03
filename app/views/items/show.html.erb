@@ -44,7 +44,7 @@
       </tbody>
     </table>
     <div class="option">
-       <div class="favorite-btn">
+      <div class="favorite-btn">
         <% if customer_signed_in? %>
           <% if current_customer.favorite_find(@item.id) %>
             <%= link_to "お気に入り解除", destroy_favorite_path(@item.id), method: :delete %> 
