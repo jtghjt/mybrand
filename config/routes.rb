@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :customers
+
+  resources :customers, only: :show
   
   root to: "items#index"
   
