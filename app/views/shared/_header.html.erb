@@ -17,7 +17,7 @@
     </ul>
     <ul class='lists-right'>
       <% if customer_signed_in? %>
-        <li><%= link_to current_customer.nickname, "#", class: "customer-nickname" %></li>
+        <li><%= link_to current_customer.nickname, customer_path(current_customer.id), class: "customer-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_customer_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ログイン', new_customer_session_path, class: "login" %></li>
