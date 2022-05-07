@@ -1,0 +1,33 @@
+<%# header %>
+<%= render "shared/second-header" %>
+
+<%# マイページ %>
+<div class="my-contents">
+  <h2 class="title">MY PAGE</h2>
+  <div class="customer-name">
+    <%= @nickname %>
+  </div>
+  <h2 class="title">FAVORITE ITEM</h2>
+  <ul class="my-item-lists">
+  <% @favorites.each do |favorite| %>
+    <li class="list">
+      <%= link_to item_path(favorite.item_id) do %>
+      <div class="item-img-content">
+        <%= image_tag favorite.item.image, class:"my-item-img" %>
+      </div>
+      <div class="my-item-info">
+        <h3 class="my-item-name">
+          <%= favorite.item.name %>
+        </h3>
+        <div class="my-item-price">
+          <span><%= favorite.item.price %>円</span>
+        </div>
+      </div>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+  <%= link_to "会員情報の変更", "#", class:"edit-btn" %>
+</div>
+<%# hooter %>
+<%= render 'shared/second-footer' %>

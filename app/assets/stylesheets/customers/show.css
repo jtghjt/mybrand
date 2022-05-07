@@ -1,0 +1,86 @@
+
+.my-contents {
+  height: 100%;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  color: white;
+}
+
+.customer-name {
+  font-weight: bold;
+  font-size: 5vh;
+  margin-bottom: 5vh;
+  color: black;
+}
+
+.my-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+.my-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.my-item-lists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.my-item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+  margin-top: 10px;
+}
+
+
+.my-item-img-content {
+  position: relative;
+}
+
+.my-item-img {
+  width: 14vw;
+  height: 33vh;
+}
+
+.my-item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.my-item-name {
+  font-size: 2.5vh;
+}
+
+.my-item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin-top: 100px;
+  padding: 2vh 10vw;
+}

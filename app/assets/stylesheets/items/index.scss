@@ -145,7 +145,7 @@ a {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .item-lists>.list {
@@ -161,7 +161,7 @@ a {
 }
 
 .item-img {
-  width: 33vh;
+  width: 14vw;
   height: 33vh;
 }
 
