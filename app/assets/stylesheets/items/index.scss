@@ -57,8 +57,7 @@ a {
 
 .new-arrival-lists {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-around;
   color: white;
 }
 
@@ -84,17 +83,11 @@ a {
 
 /* 商品開発リンク */
 .product-nav {
-  width: 100vw;
-  background-image: image-url('title_back.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
   padding: 5vh 15vw;
-  color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
