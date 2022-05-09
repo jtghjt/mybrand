@@ -5,4 +5,7 @@ class CustomersController < ApplicationController
     @nickname = current_customer.nickname
     @favorites = Favorite.where(customer_id: current_customer.id)
   end
+
+  def edit
+  end
 end
