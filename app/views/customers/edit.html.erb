@@ -5,7 +5,7 @@
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
-      会員情報入力
+      会員情報変更入力
     </h1>
   </div>
 
@@ -16,14 +16,14 @@
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) brand太郎", maxlength:"40" %>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", maxlength:"40" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+    <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -42,10 +42,10 @@
   </div>
   <div class="form-group">
     <p class='form-info-header'>
-      本人確認
+      本人情報変更
     </p>
     <p class='form-info-text'>
-      安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+      他のお客さまに公開されることはありません。
     </p>
   </div>
   <div class="form-group">
@@ -86,19 +86,11 @@
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
-    <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
+    <p class='info-text'>※ 変更する情報は正しく入力してください。変更後の修正にはお時間を頂く場合があります。</p>
   </div>
-  <div class="form-group">
-    <h2 class='form-bottom-text'>
-      「会員登録」のボタンを押すことにより、
-      <span>利用規約</span>
-      <br>に同意したものとみなします
-    </h2>
+  <div class='edit-btn'>
+    <%= f.submit "変更する" ,class:"edit-red-btn" %>
   </div>
-  <div class='register-btn'>
-    <%= f.submit "会員登録" ,class:"register-red-btn" %>
-  </div>
-  <p class='register-info'>本人情報の登録について</p>
 </div>
 <% end %>
 

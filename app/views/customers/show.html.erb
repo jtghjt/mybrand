@@ -27,7 +27,7 @@
     </li>
   <% end %>
   </ul>
-  <%= link_to "会員情報の変更", "#", class:"edit-btn" %>
+  <%= link_to "会員情報の変更", edit_customer_path(current_customer.id), class:"edit-btn" %>
 </div>
 <%# hooter %>
 <%= render 'shared/second-footer' %>
